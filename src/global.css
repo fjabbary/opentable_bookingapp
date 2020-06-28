@@ -1,0 +1,284 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #f7f7f7;
+}
+
+#search {
+  background-image: linear-gradient(to right,
+      rgba(47, 45, 65, 0.7),
+      rgba(47, 45, 65, 0.7)),
+    url("assets/images/background.jpg");
+  /* background-image: url("assets/images/background.jpg"); */
+  font-family: "Montserrat", sans-serif;
+  background-size: cover;
+  background-position: center;
+  font-weight: 300;
+  height: 100vh;
+}
+
+.section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.booking-form {
+  background: #fff;
+  padding: 30px 15px 15px;
+  border-radius: 4px;
+  overflow: auto;
+  margin: auto;
+  width: 600px;
+}
+
+.city-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+}
+
+.input-container {
+  display: -ms-flexbox;
+  /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+
+.icon {
+  padding: 10px;
+  background: green;
+  color: white;
+  min-width: 25px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.input-field {
+  width: 100%;
+  outline: none;
+  border: 1px solid #64bc64;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  border: 1px solid green;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: green;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  outline: none;
+  font-family: inherit;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.logo-img {
+  position: absolute;
+  top: 30px;
+  left: 25px;
+  cursor: pointer;
+}
+
+#search-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-size: cover;
+  background-position: 50%;
+  padding-bottom: 1.5rem;
+  min-height: 26rem;
+  background-image: linear-gradient(to right,
+      rgba(47, 45, 65, 0.7),
+      rgba(47, 45, 65, 0.7)),
+    url("assets/images/result-background.jpg");
+  font-family: "Montserrat", sans-serif;
+}
+
+#search-result .section-center {
+  top: 25%;
+}
+
+.result {
+  background: white;
+  font-family: "Montserrat", sans-serif;
+  padding: 20px 25px;
+  margin: auto;
+}
+
+.result-information h3 {
+  text-align: center;
+}
+
+.result-information {
+  border-bottom: 1px solid grey;
+  padding-bottom: 20px;
+}
+
+.result-information div {
+  text-align: center;
+}
+
+.item {
+  padding: 5px 0;
+  display: flex;
+  cursor: pointer;
+}
+
+.item-content {
+  margin-left: 15px;
+}
+
+.item-name {
+  color: #247f9e;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.item-address {
+  color: #2d333f;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.item-phone {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration: none;
+  color: #da3743;
+  border-radius: 4px;
+  border: 0.0625rem solid #d8d9db;
+  vertical-align: middle;
+  padding: 4px 8px;
+}
+
+.item-img {
+  width: 150px;
+  height: 150px;
+}
+
+.btn-back {
+  width: 300px;
+  font-size: 15px;
+}
+
+.button-group {
+  text-align: center;
+}
+
+@media (min-width: 1056px) {
+  .result {
+    width: 64rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .booking-form {
+    width: calc(100% - 50px);
+  }
+
+  .item-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*  */
+
+.result div.dflex {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+
+.item-container {
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.input-container-parent {
+  display: flex;
+}
+
+.item {
+  padding-right: 20px;
+}
+
+.item:hover {
+  background: #eee;
+  border: 1px solid green;
+}
+
+@media (max-width: 639px) {
+  .result>div {
+    flex-direction: column;
+  }
+
+  .item-container {
+    width: 80%;
+    margin-bottom: 30px;
+    margin: auto;
+  }
+
+  .item {
+    padding: 20px 0;
+  }
+
+
+  .input-container-parent {
+    display: block;
+  }
+}
+
+@media (max-width: 1000px) {
+  .booking-form {
+    margin-top: 140px;
+  }
+}
+
+.MuiPagination-root {
+  display: flex;
+  justify-content: center;
+}
+
+.make-reservation {
+  padding: .75rem 1rem;
+  text-decoration: none;
+  background-color: #da3743;
+  color: #fff;
+  border: 1px solid #d8d9db;
+  border-radius: 5px;
+}
+
+.item-content {
+  width: 100%;
+}
