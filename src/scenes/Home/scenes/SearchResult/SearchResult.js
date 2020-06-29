@@ -147,7 +147,7 @@ class SearchResult extends React.Component {
 
                                                 <br></br>
                                                 <div>
-                                                    <a href="tel:234234" className="item-phone">
+                                                    <a href={`tel:${item.phone}`} className="item-phone">
                                                         <i className="fa fa fa-phone"></i> &nbsp;
                                                  {item.phone}
                                                     </a>
