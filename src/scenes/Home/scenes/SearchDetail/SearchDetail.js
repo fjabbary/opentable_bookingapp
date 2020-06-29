@@ -51,15 +51,17 @@ class SearchDetail extends React.Component {
 
                                     <br></br>
                                     <div>
-                                        <a href="tel:{currentSearch.phone}" className="item-phone">
+                                        <a href={`tel:${currentSearch.phone}`} className="item-phone">
                                             <i className="fa fa fa-phone"></i> &nbsp;
                                             {currentSearch.phone}
                                         </a>
-                                        <div style={{ float: 'right' }}>
-                                            <a className="make-reservation" href={currentSearch.reserve_url} target="_blank">Make Reservation</a>
-                                        </div>
+
                                     </div>
 
+
+                                </div>
+                                <div className="reserve-container">
+                                    <a className="make-reservation" href={currentSearch.reserve_url} target="_blank">Reserve</a>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +75,7 @@ class SearchDetail extends React.Component {
                             </div>
                         </div>
                     }
-                    <div className="button-group">
+                    <div className="button-group" style={{ marginTop: '40px' }}>
                         <button className="btn btn-back" onClick={() => this.onClickBack()}>
                             back
                         </button>
