@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Technical questions
 
-## Available Scripts
+1. How long did you spend on the coding assignment? What would you add to your solution if you had more time? If you didn't spend much time on the coding test, then use this as an opportunity to explain what you would add.
 
-In the project directory, you can run:
+I spent about 10 hours on this assignment. Minimal design idea was used. If I had more time, I would have spent more time on creating better and more interactive UI.
 
-### `npm start`
+2. What was the most useful feature that was added to the latest version of your chosen language? Please include a snippet of code that shows how you've used it.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+I worked on full-stack project with MERN (MongoDB, ExpressJS, ReactJS, NodeJS) stack technologies. This project was real estate website in GTA and it is advertising website for tenants. I used graph in react application which shows average rental price in visual format. The graph provides the average cost of rental in different cities in GTA area.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Please see my personal portfolio website and also github account. Project is called Capstone (Toronto Rental)
+Peronal Portfolio: www.farzinjabbary.com
+Github: https://github.com/fjabbary
 
-### `npm test`
+3. What were the more challenging parts of this assignment for you?
+   Most of it was straightforward. The challenging part was the creating UI without having access to design file.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4) How would you track down a performance issue in production? Have you ever had to do this?
+   I first check the functionality in the source code in development and find the route cause if related to the code. If the issue related to the source code, I troubleshoot the code. Otherwise, I check the if the issue is related to deployment process.
 
-### `npm run build`
+5) How would you improve the API that you just used?
+   The API is missing useful information such as rating of restaurants, number of reviews, restaurant images, menu, and real price ranges. So, I would add this information to the API since they are important factors for customers to know about the restaurants.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+6. Please describe yourself using JSON.
+   I enjoy using data in JSON format since it shows relevant information in javascript object format which makes it is easy to work with.
