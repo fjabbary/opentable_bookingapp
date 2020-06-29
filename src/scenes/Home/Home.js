@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route,  Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 import Swal from 'sweetalert2';
 
@@ -12,13 +12,13 @@ import logo from './../..//assets/images/logo.svg'
 class Home extends React.Component {
     componentDidMount() {
     }
-    goHome =() => {
+    goHome = () => {
         const { history } = this.props;
         history.push("/");
     }
 
     render() {
-        const { search: { search: {loading}}} = this.props
+        const { search: { search: { loading } } } = this.props
         if (loading) {
             Swal.fire({
                 title: 'Please wait...',
@@ -36,7 +36,7 @@ class Home extends React.Component {
 
         return (
             <div>
-                <img src={logo} className="logo-img" onClick={()=>this.goHome()}/>
+                <img src={logo} className="logo-img" onClick={() => this.goHome()} alt="open table logo" />
                 <Switch>
                     <Route path="/result" exact render={props => <SearchResult {...props} />} />
                     <Route path="/detail" exact render={props => <SearchDetail {...props} />} />

@@ -16,11 +16,11 @@ class Search extends React.Component {
         this.state = {
             city: '',
             address: '',
-            area:''
+            area: ''
         };
         this.change = this.change.bind(this);
         this.handleGetResult = this.handleGetResult.bind(this);
-    } 
+    }
     componentDidMount() {
     }
 
@@ -32,42 +32,45 @@ class Search extends React.Component {
 
     handleGetResult() {
         const { city, address, area } = this.state;
-        const {history} = this.props;
+        const { history } = this.props;
         if (city === null || city === '') {
             toastr.error('City name is missing', 'You must provide city name');
             return;
         }
-        const params= {
+        const params = {
             city: city,
             address: address,
-            area:area
+            area: area
         }
         localStorage.setItem('params', JSON.stringify(params))
         this.props.searchActions.getSearches(params);
         history.push("/result");
-        
+
     }
     render() {
         return (
             <div id="search">
-                
+
                 <div className="section-center">
                     <div className="booking-form">
                         <form>
-                            <div className="d-flex">
+                            <div className="">
                                 <div className="input-container">
+                                    <label htmlFor="city" id="city-label">City:</label>
                                     <i className="fa fa-building icon"></i>
-                                    <input className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} />
+                                    <input className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} id="city" />
                                 </div>
                             </div>
-                            <div className="d-flex">
+                            <div className="">
                                 <div className="input-container">
+                                    <label htmlFor="address" id="address-label">Address:</label>
                                     <i className="fa fa-map-marker icon" aria-hidden="true"></i>
-                                    <input className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} />
+                                    <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} />
                                 </div>
                                 <div className="input-container">
+                                    <label htmlFor="area" id="area-label">Area:</label>
                                     <i className="fa fa-location-arrow icon"></i>
-                                    <input className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} />
+                                    <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} />
                                 </div>
                             </div>
                             <button type="button" className="btn" onClick={this.handleGetResult}>Check availability</button>
@@ -82,7 +85,7 @@ class Search extends React.Component {
 const SearchWithRouter = withRouter(Search);
 
 export default connect(
-    ({ default: { services:  search  } }) => ({ search }),
+    ({ default: { services: search } }) => ({ search }),
     dispatch => ({
         searchActions: bindActionCreators(
             { getSearches },

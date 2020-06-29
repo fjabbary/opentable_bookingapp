@@ -86,20 +86,23 @@ class SearchResult extends React.Component {
                     <div className="section-center">
                         <div className="booking-form">
                             <form>
-                                <div className="d-flex">
+                                <div className="">
                                     <div className="input-container">
+                                        <label htmlFor="city" id="city-label">City:</label>
                                         <i className="fa fa-building icon"></i>
-                                        <input className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} value={this.state.city} />
+                                        <input id="city" className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} value={this.state.city} />
                                     </div>
                                 </div>
-                                <div className="input-container-parent">
+                                <div className="">
                                     <div className="input-container">
+                                        <label htmlFor="address" id="address-label">Address:</label>
                                         <i className="fa fa-map-marker icon" aria-hidden="true"></i>
-                                        <input className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} value={this.state.address} />
+                                        <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} value={this.state.address} />
                                     </div>
                                     <div className="input-container">
+                                        <label htmlFor="area" id="area-label">Area:</label>
                                         <i className="fa fa-location-arrow icon"></i>
-                                        <input className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} value={this.state.area} />
+                                        <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} value={this.state.area} />
                                     </div>
                                 </div>
                                 <button type="button" className="btn" onClick={this.handleGetResult}>Check availability</button>
@@ -123,7 +126,7 @@ class SearchResult extends React.Component {
                                 {searches.restaurants.map((item, index) =>
                                     (<div key={index} className="item-container">
                                         <div className="item" onClick={() => this.onClickGetSearch(item.id)}>
-                                            <img src={item.image_url} alt='...' className="item-img" />
+                                            <img src={item.image_url} alt={item.name + ' image'} className="item-img" />
                                             <div className="item-content">
                                                 <h6 className="item-name">
 
