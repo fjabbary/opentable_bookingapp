@@ -1,7 +1,7 @@
 let settings;
 
 settings = {
-    BASE_URL: "http://opentable.herokuapp.com/",
+    BASE_URL: "https://opentable.herokuapp.com/",
     INTEGER_PRECISION: 100
 };
 
