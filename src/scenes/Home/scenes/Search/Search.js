@@ -26,7 +26,7 @@ class Search extends React.Component {
 
     change(e) {
         this.setState({
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.value.trim()
         });
     }
 
