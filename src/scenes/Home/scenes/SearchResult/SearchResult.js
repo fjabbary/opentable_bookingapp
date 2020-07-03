@@ -20,7 +20,6 @@ class SearchResult extends React.Component {
         };
         this.change = this.change.bind(this);
         this.handleGetResult = this.handleGetResult.bind(this);
-        this.blur = this.blur.bind(this);
 
     }
     componentDidMount() {
@@ -35,13 +34,6 @@ class SearchResult extends React.Component {
         });
     }
 
-    blur() {
-        this.setState({
-            city: this.state.city.trim(),
-            address: this.state.address.trim(),
-            area: this.state.area.trim()
-        })
-    }
 
     handleGetResult() {
         const { city, address, area } = this.state;
@@ -81,9 +73,9 @@ class SearchResult extends React.Component {
             });
             const old_parmas = JSON.parse(localStorage.getItem('params'));
             const params = {
-                city: old_parmas.city,
-                address: old_parmas.address,
-                area: old_parmas.area,
+                city: old_parmas.city.trim(),
+                address: old_parmas.address.trim(),
+                area: old_parmas.area.trim(),
                 page: value
             }
             console.log(params)
@@ -99,19 +91,19 @@ class SearchResult extends React.Component {
                                     <div className="input-container">
                                         <label htmlFor="city" id="city-label">City:</label>
                                         <i className="fa fa-building icon"></i>
-                                        <input id="city" className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} value={this.state.city} onBlur={this.blur} />
+                                        <input id="city" className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} value={this.state.city} />
                                     </div>
                                 </div>
                                 <div className="">
                                     <div className="input-container">
                                         <label htmlFor="address" id="address-label">Address:</label>
                                         <i className="fa fa-map-marker icon" aria-hidden="true"></i>
-                                        <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} value={this.state.address} onBlur={this.blur} />
+                                        <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} value={this.state.address} />
                                     </div>
                                     <div className="input-container">
                                         <label htmlFor="area" id="area-label">Area:</label>
                                         <i className="fa fa-location-arrow icon"></i>
-                                        <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} value={this.state.area} onBlur={this.blur} />
+                                        <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} value={this.state.area} />
                                     </div>
                                 </div>
                                 <button type="button" className="btn" onClick={this.handleGetResult}>Check availability</button>

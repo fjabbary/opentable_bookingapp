@@ -32,11 +32,7 @@ class Search extends React.Component {
     }
 
     blur() {
-        this.setState({
-            city: this.state.city.trim(),
-            address: this.state.address.trim(),
-            area: this.state.area.trim()
-        })
+        console.log(this.state.city)
     }
 
     handleGetResult() {
@@ -47,9 +43,9 @@ class Search extends React.Component {
             return;
         }
         const params = {
-            city: city,
-            address: address,
-            area: area
+            city: city.trim(),
+            address: address.trim(),
+            area: area.trim()
         }
         localStorage.setItem('params', JSON.stringify(params))
         this.props.searchActions.getSearches(params);
@@ -74,12 +70,12 @@ class Search extends React.Component {
                                 <div className="input-container">
                                     <label htmlFor="address" id="address-label">Address:</label>
                                     <i className="fa fa-map-marker icon" aria-hidden="true"></i>
-                                    <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} onBlur={this.blur} />
+                                    <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} />
                                 </div>
                                 <div className="input-container">
                                     <label htmlFor="area" id="area-label">Area:</label>
                                     <i className="fa fa-location-arrow icon"></i>
-                                    <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} onBlur={this.blur} />
+                                    <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} />
                                 </div>
                             </div>
                             <button type="button" className="btn" onClick={this.handleGetResult}>Check availability</button>
