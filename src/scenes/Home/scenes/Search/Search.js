@@ -20,14 +20,23 @@ class Search extends React.Component {
         };
         this.change = this.change.bind(this);
         this.handleGetResult = this.handleGetResult.bind(this);
+        this.blur = this.blur.bind(this);
     }
     componentDidMount() {
     }
 
     change(e) {
         this.setState({
-            [e.target.name]: e.target.value.trim()
+            [e.target.name]: e.target.value
         });
+    }
+
+    blur() {
+        this.setState({
+            city: this.state.city.trim(),
+            address: this.state.address.trim(),
+            area: this.state.area.trim()
+        })
     }
 
     handleGetResult() {
@@ -58,19 +67,19 @@ class Search extends React.Component {
                                 <div className="input-container">
                                     <label htmlFor="city" id="city-label">City:</label>
                                     <i className="fa fa-building icon"></i>
-                                    <input className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} id="city" />
+                                    <input className="input-field city-input" type="text" placeholder="Enter City" name="city" onChange={this.change} id="city" onBlur={this.blur} />
                                 </div>
                             </div>
                             <div className="">
                                 <div className="input-container">
                                     <label htmlFor="address" id="address-label">Address:</label>
                                     <i className="fa fa-map-marker icon" aria-hidden="true"></i>
-                                    <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} />
+                                    <input id="address" className="input-field city-input" type="text" placeholder="Enter Address" name="address" onChange={this.change} onBlur={this.blur} />
                                 </div>
                                 <div className="input-container">
                                     <label htmlFor="area" id="area-label">Area:</label>
                                     <i className="fa fa-location-arrow icon"></i>
-                                    <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} />
+                                    <input id="area" className="input-field city-input" type="text" placeholder="Enter Area" name="area" onChange={this.change} onBlur={this.blur} />
                                 </div>
                             </div>
                             <button type="button" className="btn" onClick={this.handleGetResult}>Check availability</button>
